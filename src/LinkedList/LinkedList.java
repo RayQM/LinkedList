@@ -79,18 +79,34 @@ public class LinkedList {
         last = previous;
         last.next = null;
     }
-    public void removeIndex(int item){
-        Node current = first;
-        for (int i = 0; i== item-1; i++){
-            current = current.next;
+    public void removeIndex(int  index){
+        Node temp = first;
+        Node current =first ;
+        
+        if (index ==0){
+            removeFirst();
         }
-        Node prev = current;
-        Node removed = current.next;
-        prev.next = removed.next;
+        else {
+            for (int i = 0; i <index;i++){
+                current = temp ;
+                temp = temp.next;
+            }
+            Node prev = current;
+            Node removed = current.next;
+            prev.next = removed.next;
+        }
+
 
     }
 
+    public void printList(){
+        Node current = first;
+        while(current != null){
+            System.out.println(current.value);
+            current = current.next;
+        }
 
+    }
 
     private Node getPrevious(Node node){
         var current = first;

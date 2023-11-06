@@ -11,7 +11,8 @@ public class Main {
         list.addLast(40);
         list.addLast(50);
 
-        list.removeIndex(2);
+        list.removeIndex(5);
+        list.printList();
         System.out.println(list.contains(20));
         }
 
