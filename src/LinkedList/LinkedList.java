@@ -1,3 +1,5 @@
+package LinkedList;
+
 import java.util.NoSuchElementException;
 
 public class LinkedList {
@@ -14,7 +16,7 @@ public class LinkedList {
     private  Node last;
 
 
-    public void addLast1(int item){
+    public void addLast(int item){
         var node = new Node(item);
 
         if (isEmpty())
